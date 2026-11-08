@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy — Rattle</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #12141a;
+      --fg: #e8eaed;
+      --muted: #9aa0a6;
+      --accent: #7dcea0;
+      --rule: #2a2e38;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f7f8fa;
+        --fg: #1a1d24;
+        --muted: #5f6368;
+        --accent: #1b7a4a;
+        --rule: #dadce0;
+      }
+    }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.55;
+    }
+    main {
+      max-width: 42rem;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 4rem;
+    }
+    h1 { font-size: 1.75rem; margin: 0 0 0.35rem; }
+    h2 { font-size: 1.15rem; margin: 2rem 0 0.6rem; }
+    p, li { color: var(--fg); }
+    .meta, .muted { color: var(--muted); font-size: 0.95rem; }
+    .disclaimer {
+      border-left: 3px solid var(--accent);
+      padding: 0.35rem 0 0.35rem 0.9rem;
+      margin: 1.25rem 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+      margin: 0.75rem 0 1rem;
+    }
+    th, td {
+      text-align: left;
+      vertical-align: top;
+      padding: 0.5rem 0.4rem;
+      border-bottom: 1px solid var(--rule);
+    }
+    a { color: var(--accent); }
+    hr { border: 0; border-top: 1px solid var(--rule); margin: 1.5rem 0; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Privacy Policy — Rattle</h1>
+    <p class="meta">
+      Effective date: 7 November 2026<br />
+      App: Rattle (<code>com.rattle.app</code>)<br />
+      Developer: Timothy O'Leary<br />
+      Contact: <a href="mailto:timothypcoleary@gmail.com">timothypcoleary@gmail.com</a>
+    </p>
+
+    <p class="disclaimer">
+      <strong>Rattle is a personal reminder and logging tool.</strong>
+      It is not a medical device and does not diagnose, treat, cure, or prevent any medical condition.
+      Always consult a qualified healthcare professional for medical advice, diagnosis, or treatment.
+    </p>
+
+    <hr />
+
+    <h2>1. Summary</h2>
+    <ul>
+      <li>Rattle is designed to keep your data <strong>on your device</strong>.</li>
+      <li>The developer does <strong>not</strong> operate a Rattle cloud account, analytics backend, advertising network, or data-sale pipeline for this app.</li>
+      <li>The phone app does <strong>not</strong> request the Android <code>INTERNET</code> permission.</li>
+      <li>Medication names, care-person names, alarm labels, and similar sensitive text you enter are stored in an on-device database and encrypted with a key held in the Android Keystore.</li>
+      <li>Optional features (notifications, exact alarms, biometric unlock, custom alarm sounds, Wear OS pairing) use Android / Google Play services APIs on <strong>your</strong> devices only.</li>
+    </ul>
+
+    <h2>2. Information you provide and store on the device</h2>
+    <p>Depending on how you use Rattle, the app may store on your device:</p>
+    <table>
+      <thead>
+        <tr><th>Category</th><th>Examples</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Health / medication information you enter</td>
+          <td>Medication names, dose schedules, taken / skipped / delayed history, medication notes</td>
+        </tr>
+        <tr>
+          <td>Care / caregiving information you enter</td>
+          <td>Care-person names and roles, care task schedules and completion history</td>
+        </tr>
+        <tr>
+          <td>Personal organization data</td>
+          <td>To-do titles, notes, due times, repeats; wall-clock alarms</td>
+        </tr>
+        <tr>
+          <td>App preferences</td>
+          <td>Home screen focus, sounds, alert mode, biometric lock, screen-secure, Today filters</td>
+        </tr>
+        <tr>
+          <td>Optional media you choose</td>
+          <td>Custom audio files you import for reminder sounds</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      This information is created by you (or generated locally from schedules you configure).
+      It is used only to provide Rattle’s reminder, history, and settings features on your device(s).
+    </p>
+    <p>
+      Sensitive labels such as medication names, care-person names, and alarm names are encrypted at rest using AES-GCM with a key stored in the Android Keystore.
+      Android backup / device-transfer of Rattle’s database and preferences is disabled in the app configuration.
+    </p>
+
+    <h2>3. Information we (the developer) collect</h2>
+    <p><strong>We do not collect personal information from Rattle through a developer-operated server.</strong></p>
+    <p>In particular, Rattle as currently shipped:</p>
+    <ul>
+      <li>Does not create a user account with the developer</li>
+      <li>Does not include third-party advertising SDKs</li>
+      <li>Does not include developer analytics / crash-reporting SDKs that upload your medication or care data</li>
+      <li>Does not sell your data</li>
+    </ul>
+    <p>
+      If this changes in a future version (for example optional cloud backup you turn on), this policy will be updated before that behavior ships,
+      and the Play Data safety section will be updated to match.
+    </p>
+
+    <h2>4. Device permissions and why they are used</h2>
+    <table>
+      <thead>
+        <tr><th>Permission / capability</th><th>Purpose</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Notifications</td><td>Dose, to-do, alarm, and care reminders</td></tr>
+        <tr><td>Exact alarms</td><td>Ring at the clock times you set</td></tr>
+        <tr><td>Boot completed</td><td>Reschedule reminders after device restart</td></tr>
+        <tr><td>Vibration / wake lock</td><td>Alert you when a reminder fires</td></tr>
+        <tr><td>Full-screen intent</td><td>Show the alarm / ring UI when the device is locked (where allowed)</td></tr>
+        <tr><td>Biometric</td><td>Optional app lock you can enable in Settings</td></tr>
+        <tr><td>Read audio / (legacy) storage</td><td>Optional: pick a custom sound from your device</td></tr>
+        <tr><td>Wearable / Play services Wearable APIs</td><td>Optional: bridge alarms and sounds to a watch you paired</td></tr>
+      </tbody>
+    </table>
+    <p>Rattle does not need contacts, location, microphone, camera, SMS, or call-log access for its core features.</p>
+
+    <h2>5. Wear OS companion</h2>
+    <p>
+      If you install the Wear companion and pair a watch, Rattle may send reminder payloads and sound-related data between your phone and your watch
+      using Google Play services Wearable message / data APIs. That traffic is between <strong>your</strong> paired devices.
+      It is not a submission of your health data to the Rattle developer.
+    </p>
+
+    <h2>6. Sharing</h2>
+    <p>We do not share Rattle user content with advertisers, data brokers, or other third parties for marketing.</p>
+    <p>Your data may leave your device only in ways you or the platform initiate, for example:</p>
+    <ul>
+      <li>You manually export, screenshot, or share content outside the app</li>
+      <li>You use Android backup / transfer features for apps generally (Rattle excludes its database and prefs from backup/transfer rules)</li>
+      <li>Google Play / Android system services process installs, updates, and crash reports according to Google’s privacy policy</li>
+      <li>Communication with a watch you paired, as described above</li>
+    </ul>
+
+    <h2>7. Children</h2>
+    <p>
+      Rattle is intended for adults who manage their own schedules or caregiving tasks. It is not directed at children under 13.
+      Do not store another person’s health information in the app unless you have a lawful basis and authority to do so.
+    </p>
+
+    <h2>8. Security</h2>
+    <ul>
+      <li>Optional biometric app lock</li>
+      <li>Optional screen-secure flag (helps block screenshots / recent-app previews)</li>
+      <li>Encryption of selected sensitive strings via Android Keystore</li>
+      <li>Exclusion of app database and preferences from Android backup / device-transfer rules</li>
+    </ul>
+    <p>No method of electronic storage is perfectly secure. You are responsible for physical access to your unlocked device and for OS-level security updates.</p>
+
+    <h2>9. Your choices</h2>
+    <ul>
+      <li>You can delete medications, care people, tasks, alarms, history entries, and custom sounds inside the app.</li>
+      <li>You can uninstall Rattle to remove its local data from that device (subject to normal Android uninstall behavior).</li>
+      <li>You can disable biometric lock, notifications, or Wear features in Settings / system settings.</li>
+      <li>Because the developer does not hold a cloud copy of your Rattle data, there is no cloud account deletion request to process for app content. Contact <a href="mailto:timothypcoleary@gmail.com">timothypcoleary@gmail.com</a> for privacy questions about the policy itself.</li>
+    </ul>
+
+    <h2>10. International users</h2>
+    <p>
+      Rattle processes the information described above on the device where you install the app.
+      The developer does not operate a Rattle content server that transfers that content internationally.
+    </p>
+
+    <h2>11. Changes</h2>
+    <p>
+      We may update this policy when the app’s privacy practices change. The “Effective date” at the top will be revised.
+      Review the policy when you update the app.
+    </p>
+
+    <h2>12. Contact</h2>
+    <p>
+      Privacy questions about Rattle: <a href="mailto:timothypcoleary@gmail.com">timothypcoleary@gmail.com</a><br />
+      Developer: Timothy O'Leary
+    </p>
+    <p class="muted">Canonical URL: <a href="https://tpcoleary.github.io/rattle-privacy/">https://tpcoleary.github.io/rattle-privacy/</a></p>
+  </main>
+</body>
+</html>
